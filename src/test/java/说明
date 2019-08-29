@@ -1,0 +1,21 @@
+testng01：可以多个包
+testng02：可以多个类
+testng03：可以多个方法，而且可以是同类下的，也可以是不同类下的
+
+testng04：group和包组合，group必须放在前面，表示只执行同时满足group和包条件的
+testng05：group和类组合，group必须放在前面，表示只执行同时满足group和类条件的
+testng06：group和方法组合，group必须放在前面，表示只执行同时满足group和方法条件的
+
+include修饰方法：执行某个条件下该方法              exclude修饰方法：执行某个条件下除这个方法外的所有方法
+include修饰group：执行某个条件下该group包括的方法              exclude修饰方法：执行某个条件下除这个group外的其他group包含的所有方法
+
+testng08：某个方法可以同时属于多个组，用大括号逗号，
+testng09：单独用组，不用包/类/方法，不报错但不会执行，group执行的是某个条件下的某些组，但是此时该条件为空，所以不执行任何方法
+
+testng11：一个suit下包含多个test
+一个testng.xml一般只包含一个suite，但可以同时有多个testng.xml文件
+
+testng.xml在src/test/java下，package也是在src/test/java下，则
+包的路径：包名，
+类路径：包名.类名
+方法路径：方法的include/exclude上面指明了包名.类名，所以指明方法名就好。
